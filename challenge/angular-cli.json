@@ -1,7 +1,7 @@
 {
   "project": {
     "version": "1.0.0-beta.19-3",
-    "name": "test-challenge"
+    "name": "unibook"
   },
   "apps": [
     {
@@ -18,9 +18,13 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "./css/styles.css",
+        "./css/form.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+
       ],
-      "scripts": [],
+      "scripts": [   
+     ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

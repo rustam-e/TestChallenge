@@ -1,0 +1,13 @@
+<div class="alert alert-dismissable fade in notification row"
+    [ngClass]="{
+        'alert-danger': item.category === 'error',
+        'alert-success': item.category === 'success',
+        'alert-info': item.category === 'info'
+    }">
+    <div>
+        <a href="#" class="close" data-dismiss="alert" aria-label="close" (click)="onClick($event)">&times;</a>
+        <div class="header"><strong>{{item.header}}</strong></div>
+        <div class="body">{{item.body}}</div>
+    </div>
+
+</div>

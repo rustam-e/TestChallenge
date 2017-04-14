@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-sm-8">
+		<notification-form (onCreate)="onCreate($event)"></notification-form>
+	</div>
+	<div class="col-sm-4">
+		<div class="notification-wrapper">
+			<notification
+			    *ngFor="let not of notifications; let i = index"
+			    [item]="not"
+			    [notifications]="notifications"
+			    (remove)="removeNotification($event.id, $event.notifications)"
+			    >
+			</notification>
+		</div>
+	</div>
+</div>

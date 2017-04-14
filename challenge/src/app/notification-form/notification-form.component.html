@@ -1,0 +1,36 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Notification Form</h1>
+    <form (ngSubmit)="onSubmit()" #notificationForm="ngForm">
+      <div class="form-group">
+        <label for="name">Header</label>
+        <input type="text" class="form-control" id="header"
+               required
+               [(ngModel)]="notification.header" name="header"
+               #header="ngModel">
+        <div [hidden]="header.valid || header.pristine"
+             class="alert alert-danger">
+          Header is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="body">Body</label>
+        <input type="text" class="form-control" id="body"
+               [(ngModel)]="notification.body" name="body">
+      </div>
+      <div class="form-group">
+        <label for="category">Hero category</label>
+        <select class="form-control" id="category"
+                required
+                [(ngModel)]="notification.category" name="category"
+                #category="ngModel">
+          <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
+        </select>
+        <div [hidden]="category.valid || category.pristine" class="alert alert-danger">
+          category is required
+        </div>
+      </div>
+      <button type="submit" class="btn btn-default"
+      [disabled]="!notificationForm.form.valid">Create</button>
+    </form>
+  </div>

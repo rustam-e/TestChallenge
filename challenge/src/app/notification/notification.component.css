@@ -1,0 +1,44 @@
+.close {
+    color: white;
+}
+.notification {
+    position: relative;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 2.5;
+    overflow: hidden; 
+    -webkit-box-shadow: 0 0 5px black;
+    -moz-box-shadow:    0 0 5px black;
+    box-shadow:         0 0 5px black;
+}
+.notification .header {
+    margin: 0;
+    padding: 0 50px 0 0;
+    line-height: 30px;
+    color: white;
+    font-size: 20px;
+}
+
+.notification .body {
+    margin: 0;
+    color: white;
+    font-size: 16px;
+    padding: 0 50px 0 0;
+    line-height: 20px;
+}
+
+.notification.alert-danger { background: #F44336; }
+.notification.alert-success { background: #8BC34A; }
+.notification.alert-info { background: #03A9F4; }
+
+@-webkit-keyframes slideDown {
+    0%, 100% { -webkit-transform: translateY(-50px); }
+    10%, 90% { -webkit-transform: translateY(0px); }
+}
+@-moz-keyframes slideDown {
+    0%, 100% { -moz-transform: translateY(-50px); }
+    10%, 90% { -moz-transform: translateY(0px); }
+}
